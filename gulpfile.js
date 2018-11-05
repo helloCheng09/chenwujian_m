@@ -1,6 +1,7 @@
 let gulp = require("gulp");
 let babel = require("gulp-babel");
 let uglify = require("gulp-uglify");
+let concat = require('gulp-concat');
 let cleanCSS = require('gulp-clean-css')
 let jsRemove = require('gulp-remove-logging')
 var strip = require("gulp-strip-debug")
@@ -29,9 +30,15 @@ gulp.task("img", () => {
     return gulp.src(folder.src + "img/*")
         .pipe(gulp.dest(folder.build + "img"))
 })
+// concat
+gulp.task("concat", () => {
+    return gulp.src([folder.src + "js/click.js", folder.src + "js/index.js"])
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest(folder.src + "js"))
+})      
 // js
 gulp.task("js", () => {
-    return gulp.src(folder.src + "js/*.js")
+     return gulp.src([ folder.src + "js/*.js" ])
         .pipe(strip())
         .pipe(babel({
             presets: ['es2015']
