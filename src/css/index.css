@@ -1,5 +1,31 @@
 @import "depend/mReset.css";
 #jsCwjMob {
-  font-size: 40px;
-  color: red;
+  position: relative;
+  min-height: 100vh;
+  background-size: 100vw auto;
+  background-position: top left;
+}
+#jsCwjMob .js-p {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#jsCwjMob .js-p .link-qiandao {
+  text-align: center;
+}
+#jsCwjMob .js-p .link-qiandao a {
+  display: inline-block;
+  width: 160px;
+  line-height: 40px;
+  color: #fff;
+}
+#jsCwjMob .js-p .link-qiandao .to-qiandao-page {
+  background-color: #4a78e1;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+#jsCwjMob .js-p .link-qiandao .to-guanzhu-page {
+  background-color: #41b200;
+  border-radius: 20px;
 }

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>晨午检报告-详情</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/chenwujian_m.css">
+    <script src="../js/depend/jQuery.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="cwjDet">
+        <div class="tag-p">
+            <span class="tag-item mob_1px select">
+                <div class="tag-d ">晨检</div>
+            </span>
+            <span class="tag-item mob_1px">
+                <div class="tag-d ">午检</div>
+            </span>
+        </div>
+        <div class="main-con-p">
+            <div class="top-detail">
+                <div class="t-d-item  ">
+                    <span class="item-dt blue">应到</span>
+                    <span class="item-num">28822人</span>
+                </div>
+                <div class="t-d-item  mob_1px_t">
+                    <span class="item-dt green">实到</span>
+                    <span class="item-num">286人</span>
+                </div>
+                <div class="t-d-item mob_1px_b mob_1px_t" id="showLeave" show-status= "off">
+                    <span class="item-dt red">请假</span>
+                    <span class="item-num">
+                        2人
+                        <span class="arrow-toggle">
+                            <img src="../img/arrow.png" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="qingjia-detail">
+                    <ul class="qj-list" style="display:none;">
+                        <li class="qj-student mob_1px_b">
+                            <div class="stu-name">
+                                黄晓明
+                            </div>
+                            <div class="stu-qj">
+                                老师，刘晓明今天早晨发烧了，去医院看病
+                            </div>
+                        </li>
+                        <li class="qj-student mob_1px_b">
+                            <div class="stu-name">
+                                杨颖
+                            </div>
+                            <div class="stu-qj">
+                                老师，周红红昨天不小心摔伤了，两个膝盖都摔伤了，近期不能
+                                去学校。
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mid-detail">
+                <div class="title-common tiwen-t mob_1px_b">
+                    <div class="title-det-common  ">
+                        <span class="title-text light-blue">
+                            饼状图
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bingtu-p">
+                    <div class="bingtu-b">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bot-detail">
+                <div class="title-common tiwen-t mob_1px_b"  id="showFashao" show-status="off">
+                    <span class="title-det-common">
+                        <span class="title-text  orange">
+                            体温测试
+                        </span>
+                        <div class="yichang-t orange-text">
+                            2人异常
+                            <span class="arrow-toggle">
+                                <img src="../img/arrow.png" alt="">
+                            </span>
+                        </div>
+                    </span>
+                </div>
+                <ul class="yichang-list" style="display:none;" show-status= "off">
+                    <li class="yichang-item mob_1px_b">
+                        韩梅梅111
+                    </li>
+                    <li class="yichang-item mob_1px_b">
+                        李磊磊
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-con-p " style="display:none;">
+            <div class="top-detail">
+                <div class="t-d-item  ">
+                    <span class="item-dt blue">应到</span>
+                    <span class="item-num">288人</span>
+                </div>
+                <div class="t-d-item  mob_1px_t">
+                    <span class="item-dt green">实到</span>
+                    <span class="item-num">286人</span>
+                </div>
+                <div class="t-d-item mob_1px_b mob_1px_t">
+                    <span class="item-dt red">请假</span>
+                    <span class="item-num">
+                        2人
+                        <span class="arrow-toggle">
+                            <img src="../img/arrow.png" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="qingjia-detail">
+                    <ul class="qj-list">
+                        <li class="qj-student mob_1px_b">
+                            <div class="stu-name">
+                                黄晓明
+                            </div>
+                            <div class="stu-qj">
+                                老师，刘晓明今天早晨发烧了，去医院看病
+                            </div>
+                        </li>
+                        <li class="qj-student mob_1px_b">
+                            <div class="stu-name">
+                                杨颖
+                            </div>
+                            <div class="stu-qj">
+                                老师，周红红昨天不小心摔伤了，两个膝盖都摔伤了，近期不能
+                                去学校。
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mid-detail">
+                <div class="title-common tiwen-t mob_1px_b">
+                    <div class="title-det-common  ">
+                        <span class="title-text light-blue">
+                            饼状图
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bingtu-p">
+                    <div class="bingtu-b">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bot-detail">
+                <div class="title-common tiwen-t mob_1px_b">
+                    <span class="title-det-common">
+                        <span class="title-text  orange">
+                            体温测试
+                        </span>
+                        <div class="yichang-t orange-text">
+                            2人异常
+                            <span class="arrow-toggle">
+                                <img src="../img/arrow.png" alt="">
+                            </span>
+                        </div>
+                    </span>
+                </div>
+                <ul class="yichang-list">
+                    <li class="yichang-item mob_1px_b">
+                        韩梅梅
+                    </li>
+                    <li class="yichang-item mob_1px_b">
+                        李磊磊
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="../js/click.js" type="text/javascript"></script>
+    <script src="../js/index.js" type="text/javascript"></script>
+</body>
+
+</html>

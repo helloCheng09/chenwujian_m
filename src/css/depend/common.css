@@ -1,0 +1,47 @@
+#cwjDet .title-det-common {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 20px;
+  line-height: 50px;
+  background-color: #fff;
+}
+#cwjDet .title-det-common .title-text {
+  position: relative;
+}
+#cwjDet .title-det-common .orange-text {
+  color: #ec6941;
+}
+#cwjDet .title-det-common .light-blue::before {
+  background-color: #00b7ee;
+}
+#cwjDet .title-det-common .orange::before {
+  background-color: #ec6941;
+}
+#cwjDet .title-det-common .title-text::before {
+  position: relative;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  margin-top: -7px;
+  display: inline-block;
+  width: 3px;
+  height: 15px;
+}
+#cwjDet .title-common::after {
+  border-bottom: #ddd;
+}
+#cwjDet .arrow-toggle {
+  display: inline-block;
+}
+#cwjDet .arrow-toggle img {
+  transition: all 300ms linear;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+}
+#cwjDet .arrow-toggle .rotate {
+  transform: rotateX(180deg);
+}

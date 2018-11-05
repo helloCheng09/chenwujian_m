@@ -38,7 +38,7 @@ gulp.task("img", () => {
 })
 // js
 gulp.task("js", () => {
-    return gulp.src(folder.src + "js/index.js")
+    return gulp.src(folder.src + "js/*.js")
         .pipe(strip())
         .pipe(babel({
             presets: ['es2015']

@@ -1,0 +1,52 @@
+#cwjDet {
+    .title-common {}
+    .title-det-common {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 20px;
+        line-height: 50px;
+        background-color: #fff;
+        .title-text {
+            position: relative;
+        }
+        .orange-text {
+            color: #ec6941;
+        }
+        .light-blue::before {
+            background-color: #00b7ee;
+        }
+        .orange::before {
+            background-color: #ec6941;
+        }
+        .title-text::before {
+            position: relative;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            margin-top: -7px;
+            display: inline-block;
+            width: 3px;
+            height: 15px;
+        }
+        .yichang-t {}
+    }
+    .title-common::after {
+        border-bottom: #ddd;
+    }
+    .arrow-toggle {
+        display: inline-block;
+        img {
+            // transform: rotateX(180deg);
+            transition: all 300ms linear;
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            vertical-align: middle;
+        }
+        .rotate {
+            transform: rotateX(180deg);
+        }
+    }
+}

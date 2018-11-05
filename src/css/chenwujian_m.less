@@ -1,0 +1,138 @@
+@import "./depend/mReset.css";
+@import "./depend/common.css";
+#cwjDet {
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    .tag-p {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 45px;
+        line-height: 45px;
+        background-color: #fff;
+        .tag-item {
+            display: inline-block;
+            width: 75px;
+            height: 27px;
+            vertical-align: middle;
+            border-radius: 13px;
+            background-color: #fff;
+            .tag-d {
+                height: 100%;
+                text-align: center;
+                line-height: 27px;
+                color: #333;
+            }
+        }
+        .tag-item::before {
+            border-radius: 44px;
+            border-color: #333;
+        }
+        .select {
+            background-color: #4a78e1;
+            .tag-d {
+                color: #fff;
+            }
+        }
+        .select::before {
+            border: none;
+            border-color: #4a78e1;
+        }
+    }
+    .top-detail {
+        margin-bottom: 10px;
+        .t-d-item {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-right: 20px;
+            line-height: 50px;
+            background-color: #fff;
+            .item-dt {
+                position: relative;
+            }
+            .item-dt::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                margin-top: -7px;
+                display: inline-block;
+                width: 3px;
+                height: 15px;
+            }
+            .red::before {
+                background-color: #ff0000;
+            }
+            .green::before {
+                background-color: #41b200;
+            }
+            .blue::before {
+                background-color: #4a78e1;
+            }
+            .item-num {
+                color: #666;
+            }
+            .arrow-toggle {
+                display: inline-block;
+                img {
+                    // transform: rotateX(180deg);
+                    transition: all 300ms linear;
+                    display: inline-block;
+                    width: 13px;
+                    height: 13px;
+                    vertical-align: middle;
+                }
+                .rotate {
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+        .t-d-item::before {
+            border-color: #ddd;
+        }
+        .t-d-item::after {
+            border-color: #ddd;
+        }
+        .qingjia-detail {
+            background-color: #f7f7f7;
+            .qj-list {}
+            .qj-student {
+                margin: 10px 0;
+                padding: 0px 30px 10px;
+            }
+            .qj-student::after {
+                border-color: #ddd;
+            }
+            .stu-name {
+                line-height: 2;
+            }
+            .stu-qj {
+                line-height: 1.2;
+                font-size: 14px;
+                color: #999999;
+            }
+        }
+    }
+    .mid-detail {
+        margin-bottom: 10px;
+        .title-bingtu {
+            .title-text {}
+        }
+        .bingtu-p {
+            .bingtu-b {}
+        }
+    }
+    .bot-detail {
+        .yichang-list {
+            .yichang-item {
+                line-height: 50px;
+                padding: 0 20px;
+            }
+            .yichang-item::after {
+                border-color: #ddd;
+            }
+        }
+    }
+}
