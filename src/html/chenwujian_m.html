@@ -8,7 +8,13 @@
     <title>晨午检报告-详情</title>
     <!-- css -->
     <link rel="stylesheet" href="../css/chenwujian_m.css">
+    <!-- f2 -->
+    <link rel="stylesheet" href="https://gw.alipayobjects.com/os/rmsportal/YmDAMEQVbLJpVbKiRQVX.css" />
     <script src="../js/depend/jQuery.min.js" type="text/javascript"></script>
+    <!-- 在 PC 上模拟 touch 事件 -->
+    <script src="https://gw.alipayobjects.com/os/antv/assets/f2/3.2.3/f2.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/assets/lib/lodash-4.17.4.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/rmsportal/NjNldKHIVQRozfbAOJUW.js"></script>
 
 </head>
 
@@ -32,7 +38,7 @@
                     <span class="item-dt green">实到</span>
                     <span class="item-num">286人</span>
                 </div>
-                <div class="t-d-item mob_1px_b mob_1px_t" id="showLeave" show-status= "off">
+                <div class="t-d-item mob_1px_b mob_1px_t showLeave" show-status="off">
                     <span class="item-dt red">请假</span>
                     <span class="item-num">
                         2人
@@ -75,12 +81,15 @@
 
                 <div class="bingtu-p">
                     <div class="bingtu-b">
+                        <div class="chart-wrapper">
+                            <canvas id="mountNode_M"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="bot-detail">
-                <div class="title-common tiwen-t mob_1px_b"  id="showFashao" show-status="off">
+                <div class="title-common tiwen-t mob_1px_b showFashao" show-status="off">
                     <span class="title-det-common">
                         <span class="title-text  orange">
                             体温测试
@@ -93,7 +102,7 @@
                         </div>
                     </span>
                 </div>
-                <ul class="yichang-list" style="display:none;" show-status= "off">
+                <ul class="yichang-list" style="display:none;" show-status="off">
                     <li class="yichang-item mob_1px_b">
                         韩梅梅111
                     </li>
@@ -103,17 +112,17 @@
                 </ul>
             </div>
         </div>
-        <div class="main-con-p " style="display:none;">
+        <div class="main-con-p" style="display:none;">
             <div class="top-detail">
                 <div class="t-d-item  ">
                     <span class="item-dt blue">应到</span>
-                    <span class="item-num">288人</span>
+                    <span class="item-num">28822人</span>
                 </div>
                 <div class="t-d-item  mob_1px_t">
                     <span class="item-dt green">实到</span>
                     <span class="item-num">286人</span>
                 </div>
-                <div class="t-d-item mob_1px_b mob_1px_t">
+                <div class="t-d-item mob_1px_b mob_1px_t showLeave" show-status="off">
                     <span class="item-dt red">请假</span>
                     <span class="item-num">
                         2人
@@ -123,7 +132,7 @@
                     </span>
                 </div>
                 <div class="qingjia-detail">
-                    <ul class="qj-list">
+                    <ul class="qj-list" style="display:none;">
                         <li class="qj-student mob_1px_b">
                             <div class="stu-name">
                                 黄晓明
@@ -156,12 +165,15 @@
 
                 <div class="bingtu-p">
                     <div class="bingtu-b">
+                        <div class="chart-wrapper">
+                            <canvas id="mountNode_A"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="bot-detail">
-                <div class="title-common tiwen-t mob_1px_b">
+                <div class="title-common tiwen-t mob_1px_b showFashao" id="" show-status="off">
                     <span class="title-det-common">
                         <span class="title-text  orange">
                             体温测试
@@ -174,9 +186,9 @@
                         </div>
                     </span>
                 </div>
-                <ul class="yichang-list">
+                <ul class="yichang-list" style="display:none;" show-status="off">
                     <li class="yichang-item mob_1px_b">
-                        韩梅梅
+                        韩梅梅111
                     </li>
                     <li class="yichang-item mob_1px_b">
                         李磊磊
@@ -186,7 +198,50 @@
         </div>
     </div>
 
+    <script>
+        var yingdaoM = 58
+        var shidaoM = 33
+        var weidaoM = yingdaoM - shidaoM
+        // 计算比例
+        // 晨检
+        let percentSdM = shidaoM / yingdaoM
+        let percentWdM = weidaoM / yingdaoM
+        var dataM = [{
+            amount: shidaoM,
+            ratio: percentSdM,
+            memo: '实到',
+            namekey: 'namekey'
+        }, {
+            amount: weidaoM,
+            ratio: percentWdM,
+            memo: '未到',
+            namekey: 'namekey'
+        }];
+        /****************************************/
+        var yingdaoAfter = 180
+        var shidaoAfter = 90
+        var weidaoAfter = yingdaoAfter - shidaoAfter
+
+        // 计算比例
+        // 午检
+        let percentSdA = shidaoAfter / yingdaoAfter
+        let percentWdA = weidaoAfter / yingdaoAfter
+
+        var dataAfter = [{
+            amount: shidaoAfter,
+            ratio: percentSdA,
+            memo: '实到',
+            namekey: 'namekey'
+        }, {
+            amount: weidaoAfter,
+            ratio: percentWdA,
+            memo: '未到',
+            namekey: 'namekey'
+        }];
+    </script>
+
     <!-- js -->
+    <script src="../js/echart.js" type="text/javascript"></script>
     <script src="../js/click.js" type="text/javascript"></script>
     <script src="../js/index.js" type="text/javascript"></script>
 </body>

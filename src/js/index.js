@@ -12,4 +12,6 @@ if (document.getElementById("jsCwjMob")) {
     root.leavePanel()
     // 展开发烧学生
     root.fashaoPanel()
+    // 引入饼图
+    root.renderBing(dataM, mountNode_M )
 }

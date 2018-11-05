@@ -14,14 +14,23 @@
                     let lastEle = $(".main-con-p").eq(lastIndex)
                     curEle.show()
                     lastEle.hide()
+                    if (curIndex === 0) {
+                        // 引入饼图
+                        root.renderBing(dataM, mountNode_M)
+                    } else {
+
+                        // 引入饼图
+                        root.renderBing(dataAfter, mountNode_A)
+                    }
                 }
                 lastIndex = curIndex
             })
         })
     }
+
     // 展开请假学生
     let leavePanel = () => {
-        $("#showLeave").on("click", function () {
+        $(".showLeave").on("click", function () {
             let status = $(this).attr("show-status")
             if (status === "off") {
                 $(this).find(".arrow-toggle img").addClass("rotate")
@@ -37,7 +46,7 @@
 
     // 展开体温异常学生
     let fashaoPanel = () => {
-        $("#showFashao").on("click", function () {
+        $(".showFashao").on("click", function () {
             let status = $(this).attr("show-status")
             if (status === "off") {
                 $(this).find(".arrow-toggle img").addClass("rotate")
