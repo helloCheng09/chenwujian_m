@@ -1,0 +1,36 @@
+{
+  "name": "chenwujian_m",
+  "version": "1.0.0",
+  "description": "妈妈我在这",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloCheng09/chenwujian_m.git"
+  },
+  "keywords": [
+    "b110110"
+  ],
+  "author": "Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helloCheng09/chenwujian_m/issues"
+  },
+  "homepage": "https://github.com/helloCheng09/chenwujian_m#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-remove-logging": "^1.2.0",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}
